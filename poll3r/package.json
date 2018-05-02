@@ -1,0 +1,17 @@
+{
+  "name": "poll3r",
+  "version": "0.0.1",
+  "description": "app to make requests to rasp3",
+  "author": "Arthur",
+  "license": "ISC",
+  "entry point": "poll3r.js",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "request": "^2.81.0",
+    "traverse": "^0.6.6",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.31"
+  }
+}
+
