@@ -1,43 +1,46 @@
-# poll3r-backup (App para fazer requests ao Rasp3)
+# poll3r-backup (App to request Raspberry PI 3 for PM)
 
-## Pra que serve?
+## What it is for?
 
-Se comunica com o RPI3 para acessar os dados de medição e gravá-los no banco de dados.
-
-
-## Como funciona?
-
-Faz requests ao raspberry PI 3 (contendo resin.io) passando como parâmetro a tag, que possui os registradores a serem buscados na memória do webserver do PM5560 (conectado ao raspberry pi). Faz o tratamento do resultado dessa requisição retirando os espaços vazios e com asteriscos e depois grava no banco de dados. 
+App to request Raspberry PI 3 for PM5560 electrical measurements and save them into a MongoDB 
 
 
-## Arquivos principais e suas funções
+## How it works?
+
+Make requests to the Raspberry PI 3 (containing resin.io OS) passing as a parameter the tag, which has the registers to be searched into the memory of the PM5560's webserver (connected to the Raspberry PI through a Ethernet cable). Then it handle the result of request, filtering "*" and blank spaces and them stores into the MongoDB database.
+
+
+## Main files and its functionalities
 
 **/poll3r/poll3r.js**
 
-Inicializa o banco de dados e faz a chamada da função principal a cada 60 000ms (1 minuto). Essa função faz a requisição ao Raspberry PI 3 (que está conectado ao medidor de energia) recebe os dados de medição, faz o tratamento, e os grava no banco de dados.
+Starts the database and make the call to the main function each 60 000 ms (1 minute). This function make a request to the Raspberry PI 3 (which is connected to the energy meter), receive the measurement data, validates it and store into the database.
+
 
 **/js/tag.js**
 
-Esse arquivo contém as tags contendo os registradores do que deve ser buscado na memória do webserver do PM5560 (medidor de energia). Contém também as funções para formatar os campos em formato JSON.
+This file contains the tags containing the registers of what should be searched into the memory of the webserver of PM5560 (energy meter). Also contains the functions to format the fields into JSON.
 
 
 ## Built With
 
-- ESP8266
-- WS2812b LED strips
-- Arduino C/C++
+- PM5560
+- Raspberry PI 3
+- Resin.io/Balena
+- JavaScript/Node.js
 - VSCode
 - Ubuntu 20.04.3
+- MongoDB
 
 
 ## Setup
 
-- Get the link of the repository: `git@github.com:arthurborgesdev/colete-matchvision.git`
-- Clone it as `git@github.com:arthurborgesdev/colete-matchvision.git` on a Terminal
+- Get the link of the repository: `git@github.com:arthurborgesdev/poll3r-backup.git`
+- Clone it as `git@github.com:arthurborgesdev/poll3r-backup.git` on a Terminal
 
 ## Usage
 
-- This project runs on physical devices that does not exist anymore. But the codebase is a reference for future Arduino embedded projects.
+- This project runs on physical devices that does not exists anymore. But the codebase is a reference for future resin.io/balena/PM5560 projects.
 
 
 ## Author
@@ -59,5 +62,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- RYD Engenharia and all the people related
+- Energizei Engenharia and all the people related
 - Lots and lots of Stack Overflow questions and answers
