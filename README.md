@@ -19,3 +19,45 @@ Inicializa o banco de dados e faz a chamada da função principal a cada 60 000m
 **/js/tag.js**
 
 Esse arquivo contém as tags contendo os registradores do que deve ser buscado na memória do webserver do PM5560 (medidor de energia). Contém também as funções para formatar os campos em formato JSON.
+
+
+## Built With
+
+- ESP8266
+- WS2812b LED strips
+- Arduino C/C++
+- VSCode
+- Ubuntu 20.04.3
+
+
+## Setup
+
+- Get the link of the repository: `git@github.com:arthurborgesdev/colete-matchvision.git`
+- Clone it as `git@github.com:arthurborgesdev/colete-matchvision.git` on a Terminal
+
+## Usage
+
+- This project runs on physical devices that does not exist anymore. But the codebase is a reference for future Arduino embedded projects.
+
+
+## Author
+
+👤 **Arthur Borges**
+
+- GitHub: [@arthuborgesdev](https://github.com/arthurborgesdev)
+- Twitter: [@arthurmoises](https://twitter.com/arthurmoises)
+- LinkedIn: [Arthur Borges](https://linkedin.com/in/arthurmoises)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- RYD Engenharia and all the people related
+- Lots and lots of Stack Overflow questions and answers
